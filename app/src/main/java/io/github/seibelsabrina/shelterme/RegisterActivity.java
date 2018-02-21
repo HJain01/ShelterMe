@@ -12,6 +12,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 
 public class RegisterActivity extends AppCompatActivity {
     EditText firstName;
@@ -20,10 +23,43 @@ public class RegisterActivity extends AppCompatActivity {
     EditText passwordEnter;
     EditText confirmPW;
 
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+
+        //firebase app listener - establish connection here
+
+        mAuth = FirebaseAuth.getInstance();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+
+        // gets current user
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            Intent intent = new Intent(this, LoginSuccessful.class);
+            startActivity(intent);
+        } else {
+            AlertDialog.Builder wrong = new AlertDialog.Builder(this);
+            wrong.setMessage("Wrong username or password");
+            wrong.setTitle("Error");
+            wrong.setPositiveButton("OK", null);
+            wrong.setCancelable(true);
+            wrong.create().show();
+
+            wrong.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                }
+            });
+        }
     }
 
     public void cancel(View view) {

@@ -17,9 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".LoggedInActivity"></activity>
+        <activity android:name=".LoggedInActivity" />
         <activity android:name=".RegisterActivity" />
-        <!--<activity android:name=".LoggedInActivity"></activity>-->
+        <!-- <activity android:name=".LoggedInActivity"></activity> -->
+        <activity android:name=".LoginSuccessful"></activity>
     </application>
 
 </manifest>
