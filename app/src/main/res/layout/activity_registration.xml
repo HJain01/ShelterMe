@@ -28,17 +28,25 @@
     <EditText
         android:id="@+id/firstName"
         android:layout_width="0dp"
+<<<<<<< HEAD
         android:layout_height="50dp"
         android:layout_marginBottom="30dp"
         android:layout_marginTop="30dp"
+=======
+        android:layout_height="27dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginTop="19dp"
+>>>>>>> 42ddc432866d96bf3e5baaf823ae412c6ea9b5cb
         android:ems="10"
         android:inputType="textPersonName"
         android:singleLine="false"
         android:textColor="@color/PaletteNavy"
         app:layout_constraintBottom_toBottomOf="@+id/lastNameText"
         app:layout_constraintEnd_toEndOf="@+id/lastName"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/firstNameText"
-        app:layout_constraintTop_toTopOf="@+id/firstNameText" />
+        app:layout_constraintTop_toTopOf="@+id/firstNameText"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/firstNameText"
@@ -58,15 +66,23 @@
     <EditText
         android:id="@+id/lastName"
         android:layout_width="0dp"
+<<<<<<< HEAD
         android:layout_height="54dp"
         android:layout_marginBottom="30dp"
         android:layout_marginTop="30dp"
+=======
+        android:layout_height="27dp"
+        android:layout_marginBottom="27dp"
+        android:layout_marginTop="26dp"
+>>>>>>> 42ddc432866d96bf3e5baaf823ae412c6ea9b5cb
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/regUsernameText"
         app:layout_constraintEnd_toEndOf="@+id/regUsername"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lastNameText"
-        app:layout_constraintTop_toBottomOf="@+id/firstName" />
+        app:layout_constraintTop_toBottomOf="@+id/firstName"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/lastNameText"
@@ -84,17 +100,25 @@
 
     <EditText
         android:id="@+id/regUsername"
+<<<<<<< HEAD
         android:layout_width="260dp"
         android:layout_height="50dp"
         android:layout_marginBottom="30dp"
+=======
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="28dp"
+>>>>>>> 42ddc432866d96bf3e5baaf823ae412c6ea9b5cb
         android:layout_marginEnd="1dp"
         android:layout_marginTop="30dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/password"
         app:layout_constraintEnd_toEndOf="@+id/passwordEnter"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/regUsernameText"
-        app:layout_constraintTop_toBottomOf="@+id/lastName" />
+        app:layout_constraintTop_toBottomOf="@+id/lastName"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/regUsernameText"
@@ -110,10 +134,16 @@
 
     <EditText
         android:id="@+id/passwordEnter"
+<<<<<<< HEAD
         android:layout_width="260dp"
         android:layout_height="50dp"
         android:layout_marginBottom="30dp"
         android:layout_marginTop="30dp"
+=======
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+>>>>>>> 42ddc432866d96bf3e5baaf823ae412c6ea9b5cb
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -121,12 +151,21 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/password"
         app:layout_constraintTop_toTopOf="parent"
+<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.533" />
 
     <TextView
         android:id="@+id/password"
         android:layout_width="147dp"
         android:layout_height="19dp"
+=======
+        app:layout_constraintVertical_bias="0.528" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+>>>>>>> 42ddc432866d96bf3e5baaf823ae412c6ea9b5cb
         android:layout_marginBottom="63dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="63dp"
@@ -135,13 +174,20 @@
         android:textColor="@color/PaletteGrey"
         app:layout_constraintBottom_toBottomOf="@+id/confirmPWText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastName" />
+        app:layout_constraintTop_toBottomOf="@+id/lastName"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/confirmPW"
+<<<<<<< HEAD
         android:layout_width="260dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
+=======
+        android:layout_width="228dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="36dp"
+>>>>>>> 42ddc432866d96bf3e5baaf823ae412c6ea9b5cb
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="@+id/confirmPWText"
@@ -156,8 +202,11 @@
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Confirm Your Password"
+<<<<<<< HEAD
         android:textColor="@color/PaletteGrey"
         app:layout_constraintBottom_toTopOf="@+id/confirmPW"
+=======
+>>>>>>> 42ddc432866d96bf3e5baaf823ae412c6ea9b5cb
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordEnter" />
 
@@ -196,6 +245,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
         android:background="@color/colorAccent"
+        android:onClick="onCheckboxClicked"
         android:text="Next →"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -211,7 +261,11 @@
         android:text="Cancel"
         app:layout_constraintBaseline_toBaselineOf="@+id/nextButton"
         app:layout_constraintEnd_toEndOf="@+id/AdminBox"
+<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="0.0"
+=======
+        app:layout_constraintHorizontal_bias="0.159"
+>>>>>>> 42ddc432866d96bf3e5baaf823ae412c6ea9b5cb
         app:layout_constraintStart_toEndOf="@+id/AdminBox" />
 
 </android.support.constraint.ConstraintLayout>

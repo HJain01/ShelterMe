@@ -8,15 +8,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import io.github.seibelsabrina.shelterme.Model.*;
+
 public class LoginActivity extends AppCompatActivity {
 
     EditText usernameBox;
     EditText passwordBox;
 
+    private Model instance;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        instance = Model.getInstance();
     }
 
     public void cancel(View view) {
@@ -29,10 +34,12 @@ public class LoginActivity extends AppCompatActivity {
         passwordBox = (EditText) findViewById(R.id.passwordBox);
         String username = String.valueOf(usernameBox.getText());
         String password = String.valueOf(passwordBox.getText());
-
-        if (username.equals("user") && password.equals("pass")) {
-            Intent intent = new Intent(this, LoggedInActivity.class);
-            startActivity(intent);
+        if (instance.getUsers().containsKey(username)) {
+            User temp =  (User) instance.getUsers().get(username);
+            String tempPass = temp.getpassWord();
+            if(tempPass.equals(password)){
+                Intent intent = new Intent(this, LoggedInActivity.class);
+                startActivity(intent);}
         } else {
             AlertDialog.Builder wrong = new AlertDialog.Builder(this);
             wrong.setMessage("Wrong username or password");
