@@ -164,6 +164,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
         android:background="@color/colorAccent"
+        android:onClick="onCheckboxClicked"
         android:text="Next →"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
