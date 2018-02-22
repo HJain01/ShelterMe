@@ -137,31 +137,33 @@ public class RegisterActivity extends AppCompatActivity {
 
         // Is the view now checked?
 
-        boolean checked = ((CheckBox) view).isChecked();
+        CheckBox checkedUser = findViewById(R.id.UserBox);
+        CheckBox checkedAdmin = findViewById(R.id.AdminBox);
+        firstName = findViewById(R.id.firstName);
+        lastName = findViewById(R.id.lastName);
+        regUsername = findViewById(R.id.regUsername);
+        passwordEnter = findViewById(R.id.passwordEnter);
+        confirmPW = findViewById(R.id.confirmPW);
         _user = new User();
         _admin = new Admin();
         // Check which checkbox was clicked
-        switch(view.getId()) {
-            case R.id.UserBox:
-                if (checked) {
-                    _user.setfirstName(firstName.getText().toString());
-                    _user.setlastName(lastName.getText().toString());
-                    _user.setuserName(regUsername.getText().toString());
-                    _user.setpassWord(passwordEnter.getText().toString());
-                    instance.getUsers().put(_user.getuserName(), _user);
-                    Intent intent = new Intent(this, LoggedInActivity.class);
-                    startActivity(intent);
-                }
-            case R.id.AdminBox:
-                if (checked) {
-                    _admin.setfirstName(firstName.getText().toString());
-                    _admin.setlastName(lastName.getText().toString());
-                    _admin.setuserName(regUsername.getText().toString());
-                    _admin.setpassWord(passwordEnter.getText().toString());
-                    instance.getAdmins().put(_admin.getuserName(), _admin);
-                    Intent intent = new Intent(this, LoggedInActivity.class);
-                    startActivity(intent);
-                }
+        if (checkedUser.isChecked()) {
+            _user.setfirstName(firstName.getText().toString());
+            _user.setlastName(lastName.getText().toString());
+            _user.setuserName(regUsername.getText().toString());
+            _user.setpassWord(passwordEnter.getText().toString());
+            instance.getUsers().put(_user.getuserName(), _user);
+            Intent intent = new Intent(this, LoggedInActivity.class);
+            startActivity(intent);
+        }
+        if (checkedAdmin.isChecked()) {
+            _admin.setfirstName(firstName.getText().toString());
+            _admin.setlastName(lastName.getText().toString());
+            _admin.setuserName(regUsername.getText().toString());
+            _admin.setpassWord(passwordEnter.getText().toString());
+            instance.getAdmins().put(_admin.getuserName(), _admin);
+            Intent intent = new Intent(this, LoggedInActivity.class);
+            startActivity(intent);
         }
     }
 

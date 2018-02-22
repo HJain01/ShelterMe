@@ -34,7 +34,6 @@ public class LoginActivity extends AppCompatActivity {
         passwordBox = (EditText) findViewById(R.id.passwordBox);
         String username = String.valueOf(usernameBox.getText());
         String password = String.valueOf(passwordBox.getText());
-
         if (instance.getUsers().containsKey(username)) {
             User temp =  (User) instance.getUsers().get(username);
             String tempPass = temp.getpassWord();
