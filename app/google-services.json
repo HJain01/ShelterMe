@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1013803474558",
+    "firebase_url": "https://users-database-720ef.firebaseio.com",
+    "project_id": "users-database-720ef",
+    "storage_bucket": "users-database-720ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013803474558:android:f4874c355d6a1041",
+        "android_client_info": {
+          "package_name": "io.github.seibelsabrina.shelterme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013803474558-cd200k6kdmja59io9m5gqlgr5gobs0ij.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.github.seibelsabrina.shelterme",
+            "certificate_hash": "a503abb32dc3085f81343339b27a326822af6083"
+          }
+        },
+        {
+          "client_id": "1013803474558-l4o0jaic2b15r977cbsmpss1es45q1sr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGjo7jTNfkKtM4qgI-FO906t2U503Pmmk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013803474558-l4o0jaic2b15r977cbsmpss1es45q1sr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
