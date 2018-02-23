@@ -34,14 +34,49 @@ public class LoginActivity extends AppCompatActivity {
         passwordBox = (EditText) findViewById(R.id.passwordBox);
         String username = String.valueOf(usernameBox.getText());
         String password = String.valueOf(passwordBox.getText());
-
         if (instance.getUsers().containsKey(username)) {
             User temp =  (User) instance.getUsers().get(username);
             String tempPass = temp.getpassWord();
             if(tempPass.equals(password)){
                 Intent intent = new Intent(this, LoggedInActivity.class);
-                startActivity(intent);}
-        } else {
+                startActivity(intent);
+            } else {
+                AlertDialog.Builder wrong = new AlertDialog.Builder(this);
+                wrong.setMessage("Wrong username or password");
+                wrong.setTitle("Error");
+                wrong.setPositiveButton("OK", null);
+                wrong.setCancelable(true);
+                wrong.create().show();
+
+                wrong.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+            }
+        } else if (instance.getAdmins().containsKey(username)){
+            Admin temp = (Admin) instance.getAdmins().get(username);
+            String tempPass = temp.getpassWord();
+            if (tempPass.equals(password)) {
+                Intent intent = new Intent(this, LoggedInActivity.class);
+                startActivity(intent);
+            } else {
+                AlertDialog.Builder wrong = new AlertDialog.Builder(this);
+                wrong.setMessage("Wrong username or password");
+                wrong.setTitle("Error");
+                wrong.setPositiveButton("OK", null);
+                wrong.setCancelable(true);
+                wrong.create().show();
+
+                wrong.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+            }
+        }else {
             AlertDialog.Builder wrong = new AlertDialog.Builder(this);
             wrong.setMessage("Wrong username or password");
             wrong.setTitle("Error");

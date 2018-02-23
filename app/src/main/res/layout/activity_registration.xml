@@ -22,15 +22,17 @@
     <EditText
         android:id="@+id/firstName"
         android:layout_width="0dp"
-        android:layout_height="32dp"
+        android:layout_height="27dp"
         android:layout_marginBottom="26dp"
         android:layout_marginTop="19dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/lastNameText"
         app:layout_constraintEnd_toEndOf="@+id/lastName"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/firstNameText"
-        app:layout_constraintTop_toTopOf="@+id/firstNameText" />
+        app:layout_constraintTop_toTopOf="@+id/firstNameText"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/firstNameText"
@@ -47,15 +49,17 @@
     <EditText
         android:id="@+id/lastName"
         android:layout_width="0dp"
-        android:layout_height="29dp"
+        android:layout_height="27dp"
         android:layout_marginBottom="27dp"
         android:layout_marginTop="26dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/regUsernameText"
         app:layout_constraintEnd_toEndOf="@+id/regUsername"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lastNameText"
-        app:layout_constraintTop_toBottomOf="@+id/firstName" />
+        app:layout_constraintTop_toBottomOf="@+id/firstName"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/lastNameText"
@@ -72,7 +76,7 @@
     <EditText
         android:id="@+id/regUsername"
         android:layout_width="0dp"
-        android:layout_height="29dp"
+        android:layout_height="28dp"
         android:layout_marginBottom="28dp"
         android:layout_marginEnd="1dp"
         android:layout_marginTop="27dp"
@@ -80,8 +84,10 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/password"
         app:layout_constraintEnd_toEndOf="@+id/passwordEnter"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/regUsernameText"
-        app:layout_constraintTop_toBottomOf="@+id/lastName" />
+        app:layout_constraintTop_toBottomOf="@+id/lastName"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/regUsernameText"
@@ -97,30 +103,34 @@
         android:id="@+id/passwordEnter"
         android:layout_width="0dp"
         android:layout_height="32dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/confirmPW"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.528" />
 
     <TextView
         android:id="@+id/password"
         android:layout_width="wrap_content"
-        android:layout_height="21dp"
+        android:layout_height="18dp"
         android:layout_marginBottom="63dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="63dp"
         android:text="Enter Your Password"
         app:layout_constraintBottom_toBottomOf="@+id/confirmPWText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastName" />
+        app:layout_constraintTop_toBottomOf="@+id/lastName"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/confirmPW"
         android:layout_width="228dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="31dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="@+id/confirmPWText"
@@ -133,7 +143,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="Confirm Your Password"
-        app:layout_constraintBottom_toTopOf="@+id/confirmPW"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordEnter" />
 
@@ -179,6 +188,7 @@
         android:text="Cancel"
         app:layout_constraintBaseline_toBaselineOf="@+id/nextButton"
         app:layout_constraintEnd_toEndOf="@+id/AdminBox"
+        app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toEndOf="@+id/AdminBox" />
 
 </android.support.constraint.ConstraintLayout>

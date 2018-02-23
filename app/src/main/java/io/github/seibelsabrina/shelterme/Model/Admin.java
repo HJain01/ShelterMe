@@ -1,5 +1,8 @@
 package io.github.seibelsabrina.shelterme.Model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by Tanya on 2/22/18.
  */
@@ -52,4 +55,44 @@ public class Admin {
     public Admin() {
         this("", "", "", "");
     }
+
+
+    private Admin(Parcel in) {
+        _firstName = in.readString();
+        _lastName = in.readString();
+        _userName = in.readString();
+        _passWord = in.readString();
+    }
+
+
+    public int describeContents() {
+        return 0;
+    }
+
+
+
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(_firstName);
+        dest.writeString(_lastName);
+        dest.writeString(_userName);
+        dest.writeString(_passWord);
+
+
+    }
+
+    /**
+     * Should not have to edit this method if the constructor and write method are
+     * working correctly.
+     */
+    public static final Parcelable.Creator<Admin> CREATOR
+            = new Parcelable.Creator<Admin>() {
+        public Admin createFromParcel(Parcel in) {
+            return new Admin(in);
+        }
+
+        public Admin[] newArray(int size) {
+            return new Admin[size];
+        }
+    };
 }
+
